@@ -68,9 +68,11 @@ def solve():
     data = sys.stdin.read().strip().split()
     if not data:
         return
+    
     it = iter(data)
     n = int(next(it))
     m = int(next(it))
+    
     edges: list[tuple[int, int]] = []
     for _ in range(m):
         u = int(next(it))
