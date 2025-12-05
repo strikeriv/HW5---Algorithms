@@ -54,9 +54,6 @@ def bfs(start_node: int, adjacency_list: dict[int, list[int]]) -> tuple[int, int
         
         # add the neighbors of the node into the list
         for neighbor in adjacency_list[curr_node]:
-            # check if it's already been visited
-            # prevents useless computing & infinite since we'd be 
-            # going backwards & would compute the same node again
             if neighbor not in visited:
                 visited.add(neighbor)
                 queue.append((neighbor, curr_distance + 1))
